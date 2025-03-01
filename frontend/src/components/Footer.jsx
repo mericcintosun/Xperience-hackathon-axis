@@ -1,38 +1,46 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Github, ArrowRight, Mail } from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { Twitter, Linkedin, Github, ArrowRight, Mail, PlayCircle, FileText, Search, HelpCircle, MapPin } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const navigationLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Features', href: '/features' },
-  { name: 'How it Works', href: '/how-it-works' },
-  { name: 'Developers', href: '/developers' },
-  { name: 'FAQ', href: '/faq' }
+  { name: "Home", href: "/" },
+  { name: "Explorer", href: "/explorer" },
+  { name: "Demo", href: "/demo" },
+  { name: "For Builders", href: "/for-builders" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/axisai' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/axisai' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com/axisai' }
+  { name: "Twitter", icon: Twitter, href: "https://x.com/AxisAgentX" },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/axis-ai-agent/?viewAsMember=true",
+  },
+  {
+    name: "GitHub",
+    icon: Github,
+    href: "https://github.com/mericcintosun/Xperience-hackathon-axis",
+  },
 ];
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     // Handle newsletter subscription
-    console.log('Subscribe:', email);
-    setEmail('');
+    console.log("Subscribe:", email);
+    setEmail("");
   };
 
   return (
     <footer className="relative border-t border-[#262626] bg-[#0f0f0f]">
       <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-25" />
-      
+
       <div className="container-custom relative">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
@@ -43,27 +51,31 @@ const Footer = () => {
                 Axis AI
               </h2>
             </Link>
+            <h3 className="text-xl font-semibold text-white">Start Exploring Today</h3>
             <p className="text-muted-foreground">
-              Revolutionizing blockchain interactions with AI-powered natural language processing and automated smart contracts.
+              Unlock real-time blockchain insights with Axis AI and navigate MultiverseX effortlessly.
             </p>
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg border border-[#262626] hover:border-[#23f7de] transition-colors"
-                >
-                  <social.icon className="w-5 h-5 text-muted-foreground hover:text-[#23f7de]" />
-                </a>
-              ))}
+            <div className="flex flex-col space-y-3">
+              <Link href="/demo" className="flex items-center text-muted-foreground hover:text-[#23f7de] transition-colors">
+                <PlayCircle className="w-5 h-5 mr-2" />
+                <span>Watch Demo</span>
+              </Link>
+              <Link href="/docs" className="flex items-center text-muted-foreground hover:text-[#23f7de] transition-colors">
+                <FileText className="w-5 h-5 mr-2" />
+                <span>Read Documentation</span>
+              </Link>
+              <Link href="/explorer" className="flex items-center text-muted-foreground hover:text-[#23f7de] transition-colors">
+                <Search className="w-5 h-5 mr-2" />
+                <span>Try Interactive Queries</span>
+              </Link>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">
+              Quick Links
+            </h3>
             <ul className="space-y-4">
               {navigationLinks.map((link) => (
                 <li key={link.name}>
@@ -80,8 +92,16 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Contact</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">Need Help?</h3>
             <div className="space-y-4">
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <HelpCircle className="w-5 h-5" />
+                <span>Contact our support team for assistance.</span>
+              </div>
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <MapPin className="w-5 h-5" />
+                <span>Crypto Valley, Switzerland</span>
+              </div>
               <a
                 href="mailto:contact@axis.ai"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-[#23f7de] transition-colors"
@@ -89,20 +109,32 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
                 <span>contact@axis.ai</span>
               </a>
-              <p className="text-muted-foreground">
-                123 Blockchain Street<br />
-                Crypto Valley, CV 1234<br />
-                Switzerland
-              </p>
+            </div>
+            <div className="mt-6">
+              <div className="flex items-center space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg border border-[#262626] hover:border-[#23f7de] transition-colors"
+                  >
+                    <social.icon className="w-5 h-5 text-muted-foreground hover:text-[#23f7de]" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Stay Updated</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">
+              Stay Updated
+            </h3>
             <form onSubmit={handleSubscribe} className="space-y-4">
               <p className="text-muted-foreground">
-                Subscribe to our newsletter for the latest updates and insights.
+                Subscribe for the latest news and insights.
               </p>
               <div className="flex">
                 <input
@@ -128,7 +160,7 @@ const Footer = () => {
         <div className="border-t border-[#262626] py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Axis AI. All rights reserved.
+              © 2025 Axis AI. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <Link
@@ -151,4 +183,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
