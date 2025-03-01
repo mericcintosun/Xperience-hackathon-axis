@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col w-[80%] mx-auto lg:w-full">
       <main className="flex-grow">
         <Hero />
 

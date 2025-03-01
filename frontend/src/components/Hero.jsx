@@ -2,30 +2,132 @@
 
 import { ArrowRight, PlayCircle, Code } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { 
+      y: 30,
+      opacity: 0,
+      scale: 0.9
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        duration: 0.6
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { 
+      scale: 1, 
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 20
+      }
+    },
+    hover: { 
+      scale: 1.05,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10
+      }
+    },
+    tap: { 
+      scale: 0.95,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      y: 20,
+      opacity: 0,
+      scale: 0.8
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+        duration: 0.4
+      }
+    },
+    hover: {
+      y: -5,
+      scale: 1.05,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10
+      }
+    }
+  };
+
   return (
-    <div className="relative flex items-center max-w-[1200px] mx-auto">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="relative flex items-center max-w-[1200px] mx-auto"
+    >
       {/* Background Animation */}
    
 
       {/* Content */}
-      <div className=" mx-auto w-full my-3">
+      <div className="mx-auto w-full my-3">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 mb-6">
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 mb-6"
+          >
             Meet the Future of Blockchain Assistant
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+          <motion.p
+            variants={itemVariants}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl"
+          >
             Streamline your AI-powered transactions in the MultiverseX
             ecosystem. Transform your blockchain experience with natural
             language interface and automated triggers.
-          </p>
+          </motion.p>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8">
+          <motion.div
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8"
+          >
             {[
               {
                 title: "Natural Language Interface",
@@ -42,49 +144,90 @@ const Hero = () => {
                 description: "Comprehensive API and SDK support for developers",
               },
             ].map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
                 className="group relative overflow-hidden rounded-xl border border-[#262626] bg-[#0f0f0f]/50 p-6 backdrop-blur-sm transition-all hover:border-[#23f7de]/50"
               >
-                <div className="relative z-10">
+                <motion.div 
+                  className="relative z-10"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                >
                   <h3 className="mb-2 text-lg font-semibold text-white">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {feature.description}
                   </p>
-                </div>
-                <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#23f7de]/10 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
+                </motion.div>
+                <motion.div 
+                  className="absolute inset-0 z-0 bg-gradient-to-br from-[#23f7de]/10 via-transparent to-transparent"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link
-              href="/developers"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors"
+          <motion.div
+            variants={containerVariants}
+            className="flex flex-col sm:flex-row gap-4 mt-8"
+          >
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
+              <Link
+                href="/developers"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors"
+              >
+                Get Started
+                <motion.div
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </motion.div>
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Watch Demo
-              <PlayCircle className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/docs"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
+              <Link
+                href="/demo"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
+              >
+                Watch Demo
+                <PlayCircle className="ml-2 h-4 w-4" />
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Documentation
-              <Code className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
+              <Link
+                href="/docs"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
+              >
+                Documentation
+                <Code className="ml-2 h-4 w-4" />
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
