@@ -109,7 +109,7 @@ const ContactPage = () => {
             variants={itemVariants}
             className="text-center mb-16 space-y-4"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
               Contact Us
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -137,7 +137,7 @@ const ContactPage = () => {
                       <info.icon className="w-6 h-6 text-[#23f7de]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white">{info.title}</h3>
+                      <h3 className="font-semibold text-white text-xl">{info.title}</h3>
                       {info.link ? (
                         <a
                           href={info.link}

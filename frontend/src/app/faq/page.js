@@ -88,7 +88,7 @@ const FAQPage = () => {
             <div className="inline-block p-3 rounded-full bg-[#23f7de]/10 mb-6">
               <HelpCircle className="w-8 h-8 text-[#23f7de]" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
               Frequently Asked Questions
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

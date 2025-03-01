@@ -103,7 +103,7 @@ const ForBuildersPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-6">
               AI Agents
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">

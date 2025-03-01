@@ -115,7 +115,7 @@ const DeveloperSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-4"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+          <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
             Developer Resources
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto mb-6">

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail, MessageSquare, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-
+import Link from "next/link";
 const faqs = [
   {
     question: "What is Axis AI?",
@@ -75,7 +75,7 @@ const FAQContact = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-4"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
           Questions? We're Here to Help
         </h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto py-4">
@@ -159,13 +159,13 @@ const FAQContact = () => {
                   Email Support
                 </span>
               </a>
-              <a
-                href="#"
+              <Link
+                href="https://axisagent.vercel.app/"
                 className="flex items-center gap-3 p-4 rounded-lg border border-[#262626] hover:border-[#23f7de]/50 transition-colors"
               >
                 <MessageSquare className="w-5 h-5 text-[#23f7de]" />
                 <span className="text-sm text-muted-foreground">Live Chat</span>
-              </a>
+              </Link>
             </div>
 
             {/* Contact Form */}

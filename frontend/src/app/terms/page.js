@@ -90,7 +90,7 @@ const TermsPage = () => {
             variants={itemVariants}
             className="text-center mb-16 space-y-4"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
               Terms of Service
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -114,7 +114,7 @@ const TermsPage = () => {
                     <section.icon className="w-6 h-6 text-[#23f7de]" />
                   </div>
                   <div className="space-y-3">
-                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400 mb-4">
                       {section.title}
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">

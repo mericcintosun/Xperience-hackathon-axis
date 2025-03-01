@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         className={`min-h-full flex flex-col ${poppins.variable} font-sans bg-[#0f0f0f] text-white`}
       >
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f0f] via-[#0f0f0f]/90 to-[#0f0f0f]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] via-[#0f0f0f]/90 to-[#0f0f0f]" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
           <div className="absolute inset-0">
             <div className="h-full w-full bg-[#0f0f0f]">
