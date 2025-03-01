@@ -81,13 +81,13 @@ const Community = () => {
   };
 
   return (
-    <section className=" relative overflow-hidden border border-green-500 max-w-[1200px] mx-auto py-3">
+    <section className=" relative overflow-hidden max-w-[1200px] mx-auto py-3">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[#0f0f0f]">
-        <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
+      <div className="absolute inset-0 ">
+        <div className="absolute inset-0 " />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className=" relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,7 +132,7 @@ const Community = () => {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <div className="relative rounded-xl border border-[#262626] bg-[#0f0f0f]/50 backdrop-blur-sm p-8">
+          <div className="relative rounded-xl border border-[#262626] backdrop-blur-sm p-8">
             {/* Navigation Buttons */}
             <div className="absolute top-1/2 -translate-y-1/2 left-4">
               <button

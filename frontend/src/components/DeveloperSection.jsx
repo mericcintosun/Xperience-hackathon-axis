@@ -100,9 +100,9 @@ const DeveloperSection = () => {
   };
 
   return (
-    <section className=" relative overflow-hidden border border-green-500 max-w-[1200px] mx-auto py-3">
+    <section className=" relative overflow-hidden  max-w-[1200px] mx-auto py-3">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[#0f0f0f]">
+      <div className="absolute inset-0 ">
         <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
       </div>
 

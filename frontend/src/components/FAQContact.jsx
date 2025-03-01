@@ -52,7 +52,7 @@ const FAQContact = () => {
   };
 
   return (
-    <div className="border border-red-500 max-w-[1200px] mx-auto py-3">
+    <div className=" max-w-[1200px] mx-auto py-3">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
