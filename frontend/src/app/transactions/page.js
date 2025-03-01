@@ -3,7 +3,7 @@ import React from 'react';
 const TransactionsPage = () => {
   return (
     <div>
-        <h1>Developers</h1>
+        <h1>Transactions</h1> 
     </div>
   );
 };
