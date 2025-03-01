@@ -137,7 +137,7 @@ const Community = () => {
             <div className="absolute top-1/2 -translate-y-1/2 left-4">
               <button
                 onClick={prevTestimonial}
-                className="p-2 rounded-full border border-[#262626] text-white hover:border-[#23f7de] transition-colors"
+                className="p-2 rounded-full border border-[#262626] text-white hover:border-[#23f7de] transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
@@ -145,7 +145,7 @@ const Community = () => {
             <div className="absolute top-1/2 -translate-y-1/2 right-4">
               <button
                 onClick={nextTestimonial}
-                className="p-2 rounded-full border border-[#262626] text-white hover:border-[#23f7de] transition-colors"
+                className="p-2 rounded-full border border-[#262626] text-white hover:border-[#23f7de] transition-colors cursor-pointer"
               >
                 <ArrowRight className="w-5 h-5" />
               </button>

@@ -166,7 +166,7 @@ const DeveloperSection = () => {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                    className={`px-4 py-2 text-sm font-medium transition-colors cursor-pointer ${
                       activeTab === tab
                         ? 'text-[#23f7de] border-b-2 border-[#23f7de]'
                         : 'text-muted-foreground hover:text-white'

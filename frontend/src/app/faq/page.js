@@ -109,7 +109,7 @@ const FAQPage = () => {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#262626]/20 transition-colors"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#262626]/20 transition-colors cursor-pointer"
                 >
                   <span className="font-semibold">{item.question}</span>
                   <motion.div

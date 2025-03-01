@@ -149,7 +149,7 @@ const HowItWorks = () => {
               transition={{ delay: 0.6 }}
               className="mt-8 text-center"
             >
-              <button className="px-8 py-3 rounded-lg bg-[#23f7de] text-black font-semibold hover:opacity-90 transition-opacity">
+              <button className="px-8 py-3 rounded-lg bg-[#23f7de] text-black font-semibold hover:opacity-90 transition-opacity cursor-pointer">
                 Try Interactive Demo
               </button>
             </motion.div>

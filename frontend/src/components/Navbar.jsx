@@ -58,7 +58,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-2 text-sm font-medium text-[#a3a3a3] hover:text-[#23f7de] transition-colors group"
+                    className="flex items-center space-x-2 text-sm font-medium text-[#a3a3a3] hover:text-[#23f7de] transition-colors group cursor-pointer"
                   >
                     <motion.span
                       whileHover={{ scale: 1.1 }}
@@ -79,7 +79,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-[#a3a3a3] hover:text-[#23f7de] hover:bg-[#262626] transition-colors"
+            className="md:hidden p-2 rounded-lg text-[#a3a3a3] hover:text-[#23f7de] hover:bg-[#262626] transition-colors cursor-pointer"
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
@@ -130,7 +130,7 @@ const Navbar = () => {
                       >
                         <Link
                           href={item.href}
-                          className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-[#a3a3a3] hover:text-[#23f7de] hover:bg-[#262626] rounded-lg transition-colors"
+                          className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-[#a3a3a3] hover:text-[#23f7de] hover:bg-[#262626] rounded-lg transition-colors cursor-pointer"
                           onClick={() => setIsOpen(false)}
                         >
                           <Icon className="h-5 w-5" />

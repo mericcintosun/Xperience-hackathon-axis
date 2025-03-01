@@ -94,7 +94,7 @@ const FAQContact = () => {
                 onClick={() =>
                   setOpenQuestion(openQuestion === index ? null : index)
                 }
-                className="flex items-center justify-between w-full p-6 text-left"
+                className="flex items-center justify-between w-full p-6 text-left cursor-pointer"
               >
                 <span className="font-medium text-white">{faq.question}</span>
                 <motion.div
