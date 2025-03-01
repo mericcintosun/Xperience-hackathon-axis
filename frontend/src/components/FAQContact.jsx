@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail, MessageSquare, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const faqs = [
   {
@@ -49,6 +50,19 @@ const FAQContact = () => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
+    
+    // Show success toast
+    toast.success("Message sent successfully!", {
+      description: "We'll get back to you soon.",
+      duration: 3000,
+    });
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
@@ -210,6 +224,12 @@ const FAQContact = () => {
                   required
                 />
               </div>
+              <button
+                type="submit"
+                className="w-full px-4 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors cursor-pointer"
+              >
+                Send Message
+              </button>
             </form>
           </div>
         </motion.div>

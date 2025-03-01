@@ -1,12 +1,16 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
 });
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Axis AI - MultiverseX Ecosystem",
@@ -33,6 +37,11 @@ export default function RootLayout({ children }) {
         
         <Navbar />
         <main className="flex-grow pt-16">{children}</main>
+        <Toaster 
+          position="top-right"
+          theme="dark"
+          richColors
+        />
       </body>
     </html>
   );
