@@ -9,7 +9,7 @@ const navigationLinks = [
   { name: "Home", href: "/" },
   { name: "Explorer", href: "/explorer" },
   { name: "Demo", href: "/demo" },
-  { name: "For Builders", href: "/for-builders" },
+  { name: "AI Agents", href: "/ai-agent" },
   { name: "Contact", href: "/contact" },
 ];
 

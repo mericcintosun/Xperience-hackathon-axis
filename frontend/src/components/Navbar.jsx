@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Wallet, Code, Search, History, LifeBuoy } from 'lucide-react';
+import { Menu, X, Wallet, Code, Search, History, LifeBuoy, User  } from 'lucide-react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'For Builders', href: '/for-builders', icon: Code },
+    { name: 'AI Agents', href: '/ai-agents', icon: User  },
     { name: 'Support', href: '/support', icon: LifeBuoy },
     { name: 'Explorer', href: '/explorer', icon: Search },
     { name: 'Transactions', href: '/transactions', icon: History },
