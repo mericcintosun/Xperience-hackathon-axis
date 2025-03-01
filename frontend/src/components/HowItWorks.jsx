@@ -49,7 +49,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden border border-yellow-500 max-w-[1200px] mx-auto">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[#0f0f0f]">
         <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />

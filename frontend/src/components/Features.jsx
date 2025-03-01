@@ -67,7 +67,7 @@ const Features = () => {
   };
 
   return (
-    <section className=" relative">
+    <section className=" relative border border-blue-500 max-w-[1200px] mx-auto">
       {/* Background Effect */}
       <div className="absolute inset-0 bg-[#0f0f0f] opacity-90" />
       
