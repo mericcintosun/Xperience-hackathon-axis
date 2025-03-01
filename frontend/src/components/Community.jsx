@@ -96,7 +96,7 @@ const Community = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-4"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
             Trusted by Leaders
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

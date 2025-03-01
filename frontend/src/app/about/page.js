@@ -76,7 +76,7 @@ const AboutPage = () => {
             variants={itemVariants}
             className="text-center mb-16 space-y-4"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
               About Axis AI
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -99,7 +99,7 @@ const AboutPage = () => {
                   <section.icon className="w-6 h-6 text-[#23f7de]" />
                 </div>
                 <div className="space-y-3">
-                  <h2 className="text-xl font-semibold text-white">
+                  <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
                     {section.title}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
@@ -115,7 +115,7 @@ const AboutPage = () => {
             variants={itemVariants}
             className="mt-16 text-center"
           >
-            <h2 className="text-2xl font-semibold mb-6">Join Us</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">Join Us</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Discover how Axis AI is reshaping the blockchain landscape. Explore our platform, connect with our team, and join us on our journey to unlock the full potential of decentralized technology.
             </p>

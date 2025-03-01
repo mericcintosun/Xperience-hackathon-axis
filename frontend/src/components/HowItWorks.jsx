@@ -16,7 +16,7 @@ const steps = [
     title: "Natural Language Commands",
     description:
       "Simply tell the AI what you want to do in plain English. The system understands and executes your intentions.",
-    color: "#7928ca",
+    color: "#23f7de",
   },
   {
     icon: Zap,
@@ -78,7 +78,7 @@ const HowItWorks = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
               How It Works
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -105,7 +105,7 @@ const HowItWorks = () => {
                   {/* Step Card */}
                   <div className="group relative bg-[#0f0f0f]/50 backdrop-blur-sm border border-[#262626] rounded-xl p-6 transition-all hover:border-[#23f7de]/50">
                     {/* Step Number */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-gradient-to-r from-[#23f7de] to-[#7928ca] flex items-center justify-center text-black font-bold text-sm">
+                    <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-[#23f7de] flex items-center justify-center text-black font-bold text-sm">
                       {index + 1}
                     </div>
 
@@ -149,7 +149,7 @@ const HowItWorks = () => {
               transition={{ delay: 0.6 }}
               className="mt-8 text-center"
             >
-              <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#23f7de] to-[#7928ca] text-black font-semibold hover:opacity-90 transition-opacity">
+              <button className="px-8 py-3 rounded-lg bg-[#23f7de] text-black font-semibold hover:opacity-90 transition-opacity">
                 Try Interactive Demo
               </button>
             </motion.div>

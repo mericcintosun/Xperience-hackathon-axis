@@ -109,7 +109,7 @@ const ContactPage = () => {
             variants={itemVariants}
             className="text-center mb-16 space-y-4"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
               Contact Us
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

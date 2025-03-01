@@ -63,7 +63,7 @@ const features = [
     icon: Blocks,
     title: 'Smart Contract Templates',
     description: 'Pre-built smart contract templates with AI-powered customization.',
-    color: '#7928ca'
+    color: '#23f7de'
   },
   {
     icon: GitBranch,
@@ -115,7 +115,7 @@ const DeveloperSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-4"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+          <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
             Developer Resources
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
@@ -187,42 +187,7 @@ const DeveloperSection = () => {
           </motion.div>
         </div>
 
-        {/* Quick Links */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-        >
-          <motion.a
-            variants={itemVariants}
-            href="/docs"
-            className="group flex items-center space-x-4 rounded-xl border border-[#262626] bg-[#0f0f0f]/50 p-6 backdrop-blur-sm transition-all hover:border-[#23f7de]/50"
-          >
-            <BookOpen className="h-8 w-8 text-[#23f7de]" />
-            <div>
-              <h3 className="text-lg font-semibold text-white">Documentation</h3>
-              <p className="text-sm text-muted-foreground">
-                Explore our comprehensive API documentation
-              </p>
-            </div>
-          </motion.a>
 
-          <motion.a
-            variants={itemVariants}
-            href="/playground"
-            className="group flex items-center space-x-4 rounded-xl border border-[#262626] bg-[#0f0f0f]/50 p-6 backdrop-blur-sm transition-all hover:border-[#23f7de]/50"
-          >
-            <Cpu className="h-8 w-8 text-[#7928ca]" />
-            <div>
-              <h3 className="text-lg font-semibold text-white">API Playground</h3>
-              <p className="text-sm text-muted-foreground">
-                Test API endpoints in our interactive playground
-              </p>
-            </div>
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

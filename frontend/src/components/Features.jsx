@@ -23,7 +23,7 @@ const features = [
     title: "Automated Execution",
     description:
       "Set up smart triggers for automatic transaction execution based on market conditions.",
-    color: "#7928ca",
+    color: "#23f7de",
   },
   {
     icon: Wallet,
@@ -37,7 +37,7 @@ const features = [
     title: "Blockchain Explorer",
     description:
       "Intuitive blockchain data exploration with natural language queries.",
-    color: "#7928ca",
+    color: "#23f7de",
   },
   {
     icon: Bot,
@@ -51,7 +51,7 @@ const features = [
     title: "Security First",
     description:
       "Enterprise-grade security with real-time transaction monitoring.",
-    color: "#7928ca",
+    color: "#23f7de",
   },
 ];
 
@@ -102,7 +102,7 @@ const Features = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
               Features & Benefits
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
