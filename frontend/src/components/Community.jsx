@@ -94,7 +94,7 @@ const Community = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-4"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
             Trusted by Leaders
@@ -110,7 +110,7 @@ const Community = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -130,7 +130,7 @@ const Community = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-8"
         >
           <div className="relative rounded-xl border border-[#262626] bg-[#0f0f0f]/50 backdrop-blur-sm p-8">
             {/* Navigation Buttons */}
