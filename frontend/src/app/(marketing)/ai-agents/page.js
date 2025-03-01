@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Code, Rocket, Bell, ArrowRight, CheckCircle } from "lucide-react";
 import { useState } from "react";
-
+import AgentCards from '@/components/AgentCards';
 const ForBuildersPage = () => {
   const [showToast, setShowToast] = useState(false);
 
@@ -91,107 +91,79 @@ const ForBuildersPage = () => {
         />
       </div>
 
-      <div className="relative">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="container mx-auto px-4 py-16 max-w-[1200px]"
-        >
-          <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            {/* Main Content */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <div className="inline-block p-3 rounded-full bg-[#23f7de]/10 mb-6">
-                <Code className="w-8 h-8 text-[#23f7de]" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-4">
-                Builder Platform
-                <br />
-                Coming Soon
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                We're building something amazing for developers. A powerful
-                platform to create, integrate and innovate in the MultiverseX
-                ecosystem.
-              </p>
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#0f0f0f]">
+      {/* Header Section */}
+      <section className="w-full py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
+        
+        <div className="max-w-[1200px] mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-400 mb-6">
+              AI Agents
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Discover our suite of specialized AI agents designed to enhance your blockchain experience. From automated operations to intelligent trading, our agents are here to help.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-              {/* Features Preview */}
+      {/* Agent Cards Section */}
+      <AgentCards />
+
+      {/* Additional Info Section */}
+      <section className="w-full py-16 relative">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center"
+          >
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Join our community and be among the first to experience the future of blockchain automation.
+            </p>
+            {/* CTA */}
+            <motion.div
+            variants={itemVariants}
+            className="text-center"
+          >
+            <button
+              onClick={handleClick}
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors cursor-pointer"
+            >
+              Join Waitlist
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
+          </motion.div>
+
+          {/* Success Toast */}
+          <AnimatePresence>
+            {showToast && (
               <motion.div
-                variants={containerVariants}
-                className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto"
+                variants={toastVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-[#23f7de] text-[#0f0f0f] px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50"
               >
-                <motion.div
-                  variants={itemVariants}
-                  className="p-6 rounded-xl border border-[#262626] bg-[#0f0f0f]/50 backdrop-blur-sm"
-                >
-                  <div className="flex flex-col items-center space-y-2">
-                    <Code className="w-6 h-6 text-[#23f7de] mb-2" />
-                    <h3 className="font-semibold">Developer Tools</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Comprehensive SDK and API documentation
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  variants={itemVariants}
-                  className="p-6 rounded-xl border border-[#262626] bg-[#0f0f0f]/50 backdrop-blur-sm"
-                >
-                  <div className="flex flex-col items-center space-y-2">
-                    <Rocket className="w-6 h-6 text-[#23f7de] mb-2" />
-                    <h3 className="font-semibold">Quick Integration</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Easy-to-use integration tools and guides
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  variants={itemVariants}
-                  className="p-6 rounded-xl border border-[#262626] bg-[#0f0f0f]/50 backdrop-blur-sm"
-                >
-                  <div className="flex flex-col items-center space-y-2">
-                    <Bell className="w-6 h-6 text-[#23f7de] mb-2" />
-                    <h3 className="font-semibold">Early Access</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Join the waitlist for exclusive access
-                    </p>
-                  </div>
-                </motion.div>
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-medium">Successfully joined the waitlist!</span>
               </motion.div>
-
-              {/* CTA */}
-              <motion.div variants={itemVariants} className="text-center">
-                <button
-                  onClick={handleClick}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors cursor-pointer"
-                >
-                  Join Waitlist
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
-              </motion.div>
-
-              {/* Success Toast */}
-              <AnimatePresence>
-                {showToast && (
-                  <motion.div
-                    variants={toastVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-[#23f7de] text-[#0f0f0f] px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50"
-                  >
-                    <CheckCircle className="w-5 h-5" />
-                    <span className="font-medium">
-                      Successfully joined the waitlist!
-                    </span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
+            )}
+          </AnimatePresence>
+          </motion.div>
+        </div>
+      </section>
+    </main>
     </div>
   );
 };
