@@ -221,7 +221,8 @@ const Hero = () => {
               whileTap="tap"
             >
               <Link
-                href="/for-builders"
+                href="https://axisagent.vercel.app/"
+                target="_blank"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors"
               >
                 Get Started
@@ -232,32 +233,6 @@ const Hero = () => {
                 >
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </motion.div>
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <Link
-                href="/demo"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
-              >
-                Watch Demo
-                <PlayCircle className="ml-2 h-4 w-4" />
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <Link
-                href="/docs"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-[#262626] text-white hover:bg-[#262626] transition-colors"
-              >
-                Documentation
-                <Code className="ml-2 h-4 w-4" />
               </Link>
             </motion.div>
           </motion.div>

@@ -7,10 +7,12 @@ import { useState } from "react";
 
 const navigationLinks = [
   { name: "Home", href: "/" },
-  { name: "Explorer", href: "/explorer" },
-  { name: "Demo", href: "/demo" },
-  { name: "AI Agents", href: "/ai-agent" },
+  { name: "About", href: "/about" },
+
+  { name: "AI Agents", href: "/ai-agents" },
+  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
+
 ];
 
 const socialLinks = [
@@ -64,10 +66,7 @@ const Footer = () => {
                 <FileText className="w-5 h-5 mr-2" />
                 <span>Read Documentation</span>
               </Link>
-              <Link href="/explorer" className="flex items-center text-muted-foreground hover:text-[#23f7de] transition-colors">
-                <Search className="w-5 h-5 mr-2" />
-                <span>Try Interactive Queries</span>
-              </Link>
+           
             </div>
           </div>
 
