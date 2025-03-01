@@ -67,7 +67,7 @@ const Features = () => {
   };
 
   return (
-    <section className=" relative border border-blue-500 max-w-[1200px] mx-auto">
+    <section className=" relative border border-blue-500 max-w-[1200px] mx-auto py-3">
       {/* Background Effect */}
       <div className="absolute inset-0 bg-[#0f0f0f] opacity-90" />
       
@@ -78,7 +78,7 @@ const Features = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-18"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
             Features & Benefits

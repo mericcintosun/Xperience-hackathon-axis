@@ -52,7 +52,7 @@ const FAQContact = () => {
   };
 
   return (
-    <div className="border border-red-500 max-w-[1200px] mx-auto">
+    <div className="border border-red-500 max-w-[1200px] mx-auto py-3">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ const FAQContact = () => {
         <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
           Questions? We're Here to Help
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto py-4">
           Find answers to common questions or reach out to our support team
         </p>
       </motion.div>

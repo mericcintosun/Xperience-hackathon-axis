@@ -100,7 +100,7 @@ const DeveloperSection = () => {
   };
 
   return (
-    <section className=" relative overflow-hidden border border-green-500 max-w-[1200px] mx-auto">
+    <section className=" relative overflow-hidden border border-green-500 max-w-[1200px] mx-auto py-3">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[#0f0f0f]">
         <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
@@ -118,7 +118,7 @@ const DeveloperSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
             Developer Resources
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
             Comprehensive tools and documentation for building on the MultiverseX blockchain with AI
           </p>
         </motion.div>

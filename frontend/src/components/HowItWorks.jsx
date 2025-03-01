@@ -1,27 +1,30 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Wallet, MessageSquare, Zap, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Wallet, MessageSquare, Zap, ArrowRight } from "lucide-react";
 
 const steps = [
   {
     icon: Wallet,
-    title: 'Create Your Wallet',
-    description: 'Set up your MultiverseX wallet with AI assistance in just a few clicks. No technical knowledge needed.',
-    color: '#23f7de'
+    title: "Create Your Wallet",
+    description:
+      "Set up your MultiverseX wallet with AI assistance in just a few clicks. No technical knowledge needed.",
+    color: "#23f7de",
   },
   {
     icon: MessageSquare,
-    title: 'Natural Language Commands',
-    description: 'Simply tell the AI what you want to do in plain English. The system understands and executes your intentions.',
-    color: '#7928ca'
+    title: "Natural Language Commands",
+    description:
+      "Simply tell the AI what you want to do in plain English. The system understands and executes your intentions.",
+    color: "#7928ca",
   },
   {
     icon: Zap,
-    title: 'Automated Execution',
-    description: 'Let the AI handle the technical details. Transactions are processed securely and efficiently.',
-    color: '#23f7de'
-  }
+    title: "Automated Execution",
+    description:
+      "Let the AI handle the technical details. Transactions are processed securely and efficiently.",
+    color: "#23f7de",
+  },
 ];
 
 const HowItWorks = () => {
@@ -30,9 +33,9 @@ const HowItWorks = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -43,13 +46,13 @@ const HowItWorks = () => {
       transition: {
         type: "spring",
         stiffness: 50,
-        damping: 20
-      }
-    }
+        damping: 20,
+      },
+    },
   };
 
   return (
-    <section className="relative overflow-hidden border border-yellow-500 max-w-[1200px] mx-auto">
+    <section className="relative overflow-hidden border border-yellow-500 max-w-[1200px] mx-auto py-3">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[#0f0f0f]">
         <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
@@ -62,13 +65,14 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
             How It Works
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience the simplicity of blockchain interaction with our AI-powered platform
+            Experience the simplicity of blockchain interaction with our
+            AI-powered platform
           </p>
         </motion.div>
 
@@ -80,9 +84,6 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Connection Lines */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#23f7de]/20 via-[#7928ca]/20 to-[#23f7de]/20 hidden md:block" />
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {steps.map((step, index) => (
               <motion.div
@@ -100,7 +101,10 @@ const HowItWorks = () => {
                   {/* Icon */}
                   <div className="mb-4 relative">
                     <div className="w-12 h-12 rounded-full bg-[#262626] flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <step.icon className="h-6 w-6" style={{ color: step.color }} />
+                      <step.icon
+                        className="h-6 w-6"
+                        style={{ color: step.color }}
+                      />
                     </div>
                   </div>
 
@@ -144,4 +148,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks; 
+export default HowItWorks;

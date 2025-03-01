@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-[calc(100vh-4rem)] flex items-center border border-red-500 max-w-[1200px] mx-auto">
+    <div className="relative flex items-center border border-red-500 max-w-[1200px] mx-auto">
       {/* Background Animation */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f0f] via-[#0f0f0f]/90 to-[#0f0f0f]" />
@@ -18,10 +18,10 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="border border-blue-500 mx-auto w-full">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
+      <div className=" mx-auto w-full my-3">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 mb-6">
             Meet the Future of Blockchain Assistant
           </h1>
 
