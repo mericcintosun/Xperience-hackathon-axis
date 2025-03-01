@@ -17,10 +17,10 @@ const Hero = () => {
   };
 
   const itemVariants = {
-    hidden: { 
+    hidden: {
       y: 30,
       opacity: 0,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       y: 0,
@@ -30,45 +30,45 @@ const Hero = () => {
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   const buttonVariants = {
     hidden: { scale: 0.8, opacity: 0 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       opacity: 1,
       transition: {
         type: "spring",
         stiffness: 200,
-        damping: 20
-      }
+        damping: 20,
+      },
     },
-    hover: { 
+    hover: {
       scale: 1.05,
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 10
-      }
+        damping: 10,
+      },
     },
-    tap: { 
+    tap: {
       scale: 0.95,
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
+    hidden: {
       y: 20,
       opacity: 0,
-      scale: 0.8
+      scale: 0.8,
     },
     visible: {
       y: 0,
@@ -78,8 +78,8 @@ const Hero = () => {
         type: "spring",
         stiffness: 100,
         damping: 12,
-        duration: 0.4
-      }
+        duration: 0.4,
+      },
     },
     hover: {
       y: -5,
@@ -87,9 +87,9 @@ const Hero = () => {
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   return (
@@ -99,8 +99,44 @@ const Hero = () => {
       variants={containerVariants}
       className="relative flex items-center max-w-[1200px] mx-auto"
     >
-      {/* Background Animation */}
-   
+      {/* Background Effects */}
+      <div className="fixed inset-0 pointer-events-none">
+        {/* Primary Light Beam */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: [0, 0.35, 0],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 20,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0.2,
+          }}
+          className="absolute top-0 left-0 right-0 h-[800px]"
+          style={{
+            background: `
+                conic-gradient(from 90deg at 50% -10%, 
+                  #23f7de00, 
+                  #23f7de60 10%, 
+                  #23f7de10 20%, 
+                  #23f7de10 30%, 
+                  #23f7de60 40%, 
+                  #23f7de10 50%, 
+                  #23f7de10 60%, 
+                  #23f7de60 70%, 
+                  #23f7de10 80%, 
+                  #23f7de10 90%, 
+                  #23f7de60)
+              `,
+            filter: "blur(70px)",
+            transform: "translateY(-40%)",
+            transformOrigin: "top",
+          }}
+        />
+      </div>
 
       {/* Content */}
       <div className="mx-auto w-full my-3">
@@ -152,7 +188,7 @@ const Hero = () => {
                 whileHover="hover"
                 className="group relative overflow-hidden rounded-xl border border-[#262626] bg-[#0f0f0f]/50 p-6 backdrop-blur-sm transition-all hover:border-[#23f7de]/50"
               >
-                <motion.div 
+                <motion.div
                   className="relative z-10"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -165,7 +201,7 @@ const Hero = () => {
                     {feature.description}
                   </p>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 z-0 bg-gradient-to-br from-[#23f7de]/10 via-transparent to-transparent"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
