@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Developers', href: '/developers', icon: Code },
+    { name: 'For Builders', href: '/for-builders', icon: Code },
     { name: 'Support', href: '/support', icon: LifeBuoy },
     { name: 'Explorer', href: '/explorer', icon: Search },
     { name: 'Transactions', href: '/transactions', icon: History },

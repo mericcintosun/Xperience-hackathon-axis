@@ -221,7 +221,7 @@ const Hero = () => {
               whileTap="tap"
             >
               <Link
-                href="/developers"
+                href="/for-builders"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#23f7de] text-[#0f0f0f] font-semibold hover:bg-[#23f7de]/90 transition-colors"
               >
                 Get Started
