@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { ArrowRight, PlayCircle, Code } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, PlayCircle, Code } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -27,25 +27,28 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-            Streamline your AI-powered transactions in the MultiverseX ecosystem. 
-            Transform your blockchain experience with natural language interface and automated triggers.
+            Streamline your AI-powered transactions in the MultiverseX
+            ecosystem. Transform your blockchain experience with natural
+            language interface and automated triggers.
           </p>
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8">
             {[
               {
-                title: 'Natural Language Interface',
-                description: 'Execute complex transactions with simple commands'
+                title: "Natural Language Interface",
+                description:
+                  "Execute complex transactions with simple commands",
               },
               {
-                title: 'Automated Triggers',
-                description: 'Automate your operations with customizable triggers'
+                title: "Automated Triggers",
+                description:
+                  "Automate your operations with customizable triggers",
               },
               {
-                title: 'API Integrations',
-                description: 'Comprehensive API and SDK support for developers'
-              }
+                title: "API Integrations",
+                description: "Comprehensive API and SDK support for developers",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
@@ -64,7 +67,6 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
               href="/developers"
@@ -94,4 +96,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

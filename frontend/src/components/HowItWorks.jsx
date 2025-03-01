@@ -1,0 +1,147 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Wallet, MessageSquare, Zap, ArrowRight } from 'lucide-react';
+
+const steps = [
+  {
+    icon: Wallet,
+    title: 'Create Your Wallet',
+    description: 'Set up your MultiverseX wallet with AI assistance in just a few clicks. No technical knowledge needed.',
+    color: '#23f7de'
+  },
+  {
+    icon: MessageSquare,
+    title: 'Natural Language Commands',
+    description: 'Simply tell the AI what you want to do in plain English. The system understands and executes your intentions.',
+    color: '#7928ca'
+  },
+  {
+    icon: Zap,
+    title: 'Automated Execution',
+    description: 'Let the AI handle the technical details. Transactions are processed securely and efficiently.',
+    color: '#23f7de'
+  }
+];
+
+const HowItWorks = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 50,
+        damping: 20
+      }
+    }
+  };
+
+  return (
+    <section className="relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[#0f0f0f]">
+        <div className="absolute inset-0 bg-[radial-gradient(#23f7de10_1px,transparent_1px)] [background-size:32px_32px] opacity-50" />
+      </div>
+
+      <div className="container-custom relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#23f7de] to-[#7928ca]">
+            How It Works
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Experience the simplicity of blockchain interaction with our AI-powered platform
+          </p>
+        </motion.div>
+
+        {/* Steps */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="relative"
+        >
+          {/* Connection Lines */}
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#23f7de]/20 via-[#7928ca]/20 to-[#23f7de]/20 hidden md:block" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="relative"
+              >
+                {/* Step Card */}
+                <div className="group relative bg-[#0f0f0f]/50 backdrop-blur-sm border border-[#262626] rounded-xl p-6 transition-all hover:border-[#23f7de]/50">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-gradient-to-r from-[#23f7de] to-[#7928ca] flex items-center justify-center text-black font-bold text-sm">
+                    {index + 1}
+                  </div>
+
+                  {/* Icon */}
+                  <div className="mb-4 relative">
+                    <div className="w-12 h-12 rounded-full bg-[#262626] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <step.icon className="h-6 w-6" style={{ color: step.color }} />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {step.description}
+                  </p>
+
+                  {/* Arrow */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                      <ArrowRight className="w-6 h-6 text-[#23f7de]" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#23f7de]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Interactive Demo Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 }}
+            className="mt-8 text-center"
+          >
+            <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#23f7de] to-[#7928ca] text-black font-semibold hover:opacity-90 transition-opacity">
+              Try Interactive Demo
+            </button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorks; 
